@@ -1,0 +1,23 @@
+{
+  "name": "Profile-Generator",
+  "version": "1.0.0",
+  "description": "The user will be prompted for a favorite color, which will be used as the background color for cards.\r The PDF will be populated with the following:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nick-code92/Profile-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nick-code92/Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/Nick-code92/Profile-Generator#readme",
+  "dependencies": {
+    "inquirer": "^7.0.3"
+  }
+}
