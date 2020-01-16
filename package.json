@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/Nick-code92/Profile-Generator#readme",
   "dependencies": {
-    "inquirer": "^7.0.3"
+    "inquirer": "^7.0.3",
+    "moment": "^2.24.0",
+    "puppeteer": "^2.0.0"
   }
 }

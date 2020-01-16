@@ -1,4 +1,15 @@
-const genHTML = require("./generateHTML")
+const generateHTML = require("./generateHTML")
+
+ const inquirer = require(`inquirer`); 
+
+function getUserInput() {
+    inquirer.prompt([
+
+        type `input`,
+
+    ])
+}
+
 const questions = [
   
 ];
