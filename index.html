@@ -9,6 +9,7 @@
    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
   <link href="https://fonts.googleapis.com/css?family=BioRhyme|Cabin&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <title>My GitHub Profile</title>
   <style>
     @page {
@@ -180,33 +181,68 @@
 </head>
 
 <body>
-  <div class="row">
-    <div class="wrapper">
-        <div class="row photo-header">
-            <img src="" alt="portrait of me">
-        </div>
-        <div class="row">
-            <h1>
-                Hi!
-            </h1>
-        </div>
-        <div class="row">
-            <h1>
-                My Name is Nikddimos Gebregiorgis!
-            </h1>
-        </div>
-        <div class="row links-nav">
-
-        </div>
-    
+  <div class="container wrapper">
+    <div class="row">
+      <div class="col photo-header ">
+        <img src="${imgSrc}" class="photo-header">
+        <br>
+      </div>
     </div>
-</div>
-<div class="row">
+    <div class="row">
+      <div class="col  ">
+        <h1 class="photo-header">Hello my Name is ${name}</h1>
 
-</div>
-<div class="row">
+      </div>
+    </div>
+    <div class="row">
 
-</div>
+    </div>
+    <main>
+
+      <div class="row">
+        <div class="col link-nav"><a class="link-nav" href="${gitHub}">GitHub</a></div>
+        <div class="col">
+          <h3>${bio}</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col  ">
+          <div class="card">
+            <h3>Repo Count</h3>
+            <h4>${repos}</h4>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <h3>Followers</h3>
+            <h4>${followers}</h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <h3>Following</h3>
+            <h4>${following}</h4>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <h3>Stars</h3>
+            <h4>${star}</h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+      </div>
+
+
+    </main>
+    <div class="row wrapper"></div>
+
+  </div>>
 
 </body>
 

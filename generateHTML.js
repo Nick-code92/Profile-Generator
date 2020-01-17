@@ -1,4 +1,7 @@
-const colors = {
+var generateHTML =
+function generateHTML(data, name, imgSrc, bio, gitHub, email, repos, followers, following,star) {
+
+var colors = {
   green: {
     wrapperBackground: "#E6E1C3",
     headerBackground: "#C1C72C",
@@ -23,6 +26,7 @@ const colors = {
     headerColor: "white",
     photoBorderColor: "white"
   }
+}
 };
 
 module.exports = function generateHTML(data) {
