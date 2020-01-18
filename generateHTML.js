@@ -1,5 +1,5 @@
-var generateHTML =
-function generateHTML(data, name, imgSrc, bio, gitHub, email, repos, followers, following,star) {
+module.exports = 
+function generateHTML(color, name, imgSrc, bio, gitHub, blog, repos, followers, following,star, location) {
 
 var colors = {
   green: {
@@ -27,9 +27,8 @@ var colors = {
     photoBorderColor: "white"
   }
 }
-};
 
-module.exports = function generateHTML(data) {
+
   return `<!DOCTYPE html>
     <html lang="en">
       <head>
@@ -56,7 +55,7 @@ module.exports = function generateHTML(data) {
             height: 100%;
             }
             .wrapper {
-            background-color: ${colors[data.color].wrapperBackground};
+            background-color: ${colors[color].wrapperBackground};
             padding-top: 100px;
             }
             body {
@@ -98,8 +97,8 @@ module.exports = function generateHTML(data) {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            background-color: ${colors[data.color].headerBackground};
-            color: ${colors[data.color].headerColor};
+            background-color: ${colors[color].headerBackground};
+            color: ${colors[color].headerColor};
             padding: 10px;
             width: 95%;
             border-radius: 6px;
@@ -110,7 +109,7 @@ module.exports = function generateHTML(data) {
             border-radius: 50%;
             object-fit: cover;
             margin-top: -75px;
-            border: 6px solid ${colors[data.color].photoBorderColor};
+            border: 6px solid ${colors[color].photoBorderColor};
             box-shadow: rgba(0, 0, 0, 0.3) 4px 1px 20px 4px;
             }
             .photo-header h1, .photo-header h2 {
@@ -153,8 +152,8 @@ module.exports = function generateHTML(data) {
             .card {
               padding: 20px;
               border-radius: 6px;
-              background-color: ${colors[data.color].headerBackground};
-              color: ${colors[data.color].headerColor};
+              background-color: ${colors[color].headerBackground};
+              color: ${colors[color].headerColor};
               margin: 20px;
             }
             
@@ -177,7 +176,74 @@ module.exports = function generateHTML(data) {
           </style>
       </head>
       <body>
-        
+      <div class="container wrapper">
+      <div class="row">
+        <div class="col photo-header ">
+          <img src="${imgSrc}" class="photo-header">
+          <br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col  ">
+          <h1 class="photo-header">Hello my Name is ${name}</h1>
+  
+        </div>
+      </div>
+      <div class="row">
+  
+      </div>
+      <main>
+  
+        <div class="row">
+          <div class="col link-nav"><a class="link-nav" href="${gitHub}">GitHub</a></div>
+          <div class="col">
+            <h3>${bio}</h3>
+          </div>
+        </div>
+        <div class="row">
+        <div class="col">
+          <h3>${location}</h3>
+        </div>
+      </div>
+        <div class="row">
+          <div class="col  ">
+            <div class="card">
+              <h3>Repo Count</h3>
+              <h4>${repos}</h4>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <h3>Followers</h3>
+              <h4>${followers}</h4>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <h3>Following</h3>
+              <h4>${following}</h4>
+            </div>
+          </div>
+  
+          <div class="col">
+            <div class="card">
+              <h3>Stars</h3>
+              <h4>${star}</h4>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+        </div>
+  
+  
+      </main>
+      <div class="row wrapper"></div>
+  
+    </div>
+  
       </body>
     </html>`
 }
